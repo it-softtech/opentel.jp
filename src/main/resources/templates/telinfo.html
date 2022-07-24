@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="//www.thymeleaf.org" xmlns:layout="//www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layouts/layout}">
+<head>
+  <title>TelInfo</title>
+</head>
+<body>
+  <div class="flex" layout:fragment="content">
+    <div class="container mx-auto">
+      <form class="flex justify-center mt-52 mx-5" action="#" th:action="@{/}" th:object="${telInfoForm}"  method="post">
+        <input type="search" name="search" id="search" class="border-2 rounded-md border-green-500 h-14 w-96 pl-2" placeholder="電話番号を入力して、検索しよう" th:field="*{tel}">
+        <input type="submit" class="w-24 ml-5 bg-green-500 rounded-md px-5 text-xl text-white" value="検索"></input>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
