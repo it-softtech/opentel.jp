@@ -14,7 +14,9 @@ const config = {
     path: path.resolve(__dirname, "./src/main/resources/static"),
   },
   plugins: [
-    new MiniCssExtractPlugin(),
+    new MiniCssExtractPlugin({
+      filename: './css/main.css'
+    }),
 
     // Add your plugins here
     // Learn more about plugins from https://webpack.js.org/configuration/plugins/
